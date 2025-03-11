@@ -1,0 +1,73 @@
+.App {
+  position: relative; /* Ensure a stacking context */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: transparent; /* Make background transparent so mesh shows through */
+  color: white;
+}
+html,
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Disables scrolling */
+}
+/* Mesh styles remain the same */
+#mesh,
+.mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Rest of your mesh CSS */
+#mesh::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  mix-blend-mode: screen;
+  filter: blur(80px);
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(6, 83, 102, 0.7),
+      transparent 70%
+    ),
+    radial-gradient(circle at 70% 70%, rgba(128, 0, 128, 0.7), transparent 70%);
+  animation: animateMesh 20s ease-in-out infinite;
+}
+
+#mesh::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0) 40%,
+    #000 100%
+  );
+  z-index: -1;
+}
+
+@keyframes animateMesh {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(30px, 30px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}

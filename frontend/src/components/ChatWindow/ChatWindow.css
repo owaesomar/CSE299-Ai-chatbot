@@ -1,0 +1,212 @@
+/* Chat container with morphing gradient */
+.chat-container {
+  display: flex;
+  height: 100vh;
+  width: 120rem;
+  margin-top: 20px;
+  max-width: 2000px;
+}
+
+@keyframes gradient-morph {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Chat sidebar */
+.chat-sidebar {
+  width: 250px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  padding: 20px;
+  border-right: 2px solid #000000;
+  overflow-y: auto;
+  backdrop-filter: blur(10px); /* Blur effect */
+  isolation: isolate; /* Create a new stacking context */
+  z-index: 1; /* Ensure it stays above the background */
+}
+
+.chat-sidebar h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.chat-sidebar .history-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  color: white;
+}
+
+/* Chat window */
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 10px; /* Optional: Rounded corners */
+  margin: 10px 120px 10px 120px; /* Optional: Add some margin */
+  isolation: isolate; /* Create a new stacking context */
+  z-index: 1; /* Ensure it stays above the background */
+}
+.message.user {
+  position: relative;
+  top: 100px;
+  width: 300px; /* Or adjust width as needed */
+  align-self: flex-start; /* Aligns to the left side */ /* Example color for user messages */
+
+  padding: 10px;
+  border-radius: 10px;
+}
+.message.bot {
+  position: relative;
+  top: 100px;
+  width: 300px; /* Or adjust width as needed */
+  align-self: flex-end; /* Aligns to the right side */ /* Example color for bot messages */
+
+  padding: 10px;
+  border-radius: 10px;
+}
+.chat-history {
+  position: relative;
+  left: 80px;
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex; /* Ensure Flexbox is used */
+  flex-direction: column; /* Stack messages vertically */
+  gap: 10px;
+  width: 1200px;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background-color: #40414f;
+  border-top: 1px solid #555;
+  margin-bottom: 40px;
+  max-width: 1100px;
+  border-radius: 39px;
+  margin-left: 150px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #40414f;
+  color: white;
+}
+
+.chat-input button {
+  background-color: #b9b4b48e;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  color: #888;
+}
+
+.typing-indicator span {
+  animation: blink 1.4s infinite;
+  margin: 0 2px;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.new-chat {
+  background: #242723;
+  color: #fff;
+  border: none;
+  width: 260px;
+  height: 69px;
+  border-radius: 15px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  right: 5px;
+  top: 750px; /* Moves the element 20px down */
+}
+.recChat {
+  position: relative;
+  top: 50px;
+}
+.new-chat:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+.default-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  font-size: 1.5rem;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  flex-direction: column;
+}
+.def1 {
+  font-size: 38px;
+  position: relative;
+  bottom: 20px;
+}
+.def2 {
+  font-size: 20px;
+  color: #524747;
+}
+.assist {
+  background: linear-gradient(45deg, #242525, #6e1996);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.new-chat:active {
+  transform: scale(0.95);
+}
+.chatHis {
+  color: rgb(255, 255, 254);
+  text-decoration: none;
+  list-style: none;
+}
+.chatli {
+  background-color: #424242;
+  color: #ffffffb4;
+  border: #888 solid 0.5px;
+  margin-bottom: 20px;
+  padding: 10px;
+  position: relative;
+  right: 40px; /* Moves the element 50px to the right */
+  top: 50px;
+  width: 230px;
+  border-radius: 10px;
+}

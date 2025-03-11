@@ -1,0 +1,37 @@
+.dropdown-container {
+    position: fixed; /* Keep it fixed at the top-right */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    z-index: 1000; /* Ensure it stays on top */
+  }
+  
+  .dropdown-button {
+    width: 48px;
+    height: 48px;
+    background-color: #38a169;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-button:hover {
+    background-color: #2f855a;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 50px; /* Adjust so the dropdown appears below the button */
+    width: 128px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  

@@ -1,0 +1,158 @@
+/* Container for the contact page */
+.contact-container {
+  max-width: 1196px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Helvetica", Arial, sans-serif;
+  color: #fffefe;
+  background-color: #000000;
+  border-radius: 5px;
+  position: relative;
+  top: 120px;
+  max-height: 600px;
+}
+.contactBox1 h1 {
+  padding-left: 200px;
+  width: 500px;
+  color: #000;
+}
+.contactBox1 h3 {
+  padding-left: 50px;
+  width: 500px;
+  font-size: 18px;
+  font-weight: 60;
+  color: #000;
+}
+.social {
+  display: flex;
+  flex-direction: column;
+}
+.social1 {
+  padding-top: 20px;
+  display: flex;
+  color: #000;
+}
+.socialFooter {
+  position: relative;
+  top: 250px;
+  left: 50px;
+}
+.socialFooter img {
+  padding-right: 10px;
+}
+.social img {
+  max-width: 30px;
+  padding-left: 50px;
+  padding-right: 20px;
+}
+.contact1 {
+  position: relative;
+  bottom: 50px;
+  right: 28px;
+  background-color: rgba(255, 255, 255, 0.856);
+  width: 491px;
+  height: 658px;
+  border-radius: 10px;
+}
+
+/* Page title */
+.contact-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Success message */
+.success-message {
+  text-align: center;
+  color: green;
+  margin-bottom: 1rem;
+}
+.contactBox1 h1 {
+  position: relative;
+  right: 250px;
+  top: 30px;
+}
+
+/* Form styling */
+.contact-form {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  left: 33em;
+  bottom: 600px;
+}
+input#name {
+  width: 300px;
+}
+input#email {
+  width: 300px;
+}
+input#subject {
+  width: 300px;
+}
+textarea#message {
+  width: 600px;
+}
+/* Form labels */
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+input.underline-input {
+  /* Adjust width as needed */
+  border: none; /* Remove default border */
+  border-bottom: 2px solid #000; /* Add an underline */
+  outline: none; /* Remove focus outline */
+  background: transparent; /* Make background transparent */
+  font-size: 16px; /* Adjust font size */
+  padding: 5px;
+  width: 500px;
+  max-height: 56px; /* Adjust padding */
+}
+textarea.underline-input {
+  width: 100%; /* Adjust width as needed */
+  border: none; /* Remove default border */
+  border-bottom: 2px solid #000; /* Add an underline */
+  outline: none; /* Remove focus outline */
+  background: transparent; /* Make background transparent */
+  font-size: 16px; /* Adjust font size */
+  padding: 5px; /* Adjust padding */
+}
+
+/* Form inputs and textarea */
+.contact-form input,
+.contact-form textarea {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* Textarea specific styling */
+.contact-form textarea {
+  resize: vertical;
+  min-height: 56px;
+}
+
+/* Submit button styling */
+.contact-form button {
+  padding: 0.75rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+  width: 214px;
+  position: relative;
+  left: 400px;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}

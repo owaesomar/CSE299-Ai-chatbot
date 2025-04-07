@@ -60,6 +60,11 @@
   text-align: center;
   margin-bottom: 2rem;
 }
+p.success-message {
+  position: relative;
+  left: 500px;
+  width: 500px;
+}
 
 /* Success message */
 .success-message {
@@ -83,6 +88,9 @@
   left: 33em;
   bottom: 600px;
 }
+input {
+  color: white;
+}
 input#name {
   width: 300px;
 }
@@ -94,6 +102,7 @@ input#subject {
 }
 textarea#message {
   width: 600px;
+  color: white;
 }
 /* Form labels */
 .contact-form label {
